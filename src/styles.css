@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    background: #000;
+    background: #fff;
 }
 
 a:hover {
@@ -31,7 +31,7 @@ h3 {
 
 h4 {
     font-family: 'Spartan', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
 }
 
@@ -49,12 +49,35 @@ h6 {
 .btn {
     padding: 5px 20px;
     font-size: 14px;
-    border: 0px;
-    background: #FF4081;
+    border: 0px !important;
+    background: #b11b4d;
+    color: #fff !important;
+    background-color: rgba(177,27,77,100) !important;
+}
+
+.btn-group.filter-options .btn.btn--primary {
+    background: none !important;
+    color: #7b605b !important;
+    border-bottom: 5px solid #b11b4d !important;
+    margin: 0 5px;
+    padding: 10px 30px;
+}
+
+.videoContainer {
+    padding: 150px 0 150px 0;
+    float:left; 
+    width: 100%;
+}
+
+.btn.btn-primary:hover,
+.btn-primary:hover,
+.btn:hover {
+    color: #fff !important;
 }
 
 .navbar-brand {
-    width: 300px;
+    width: 600px;
+    padding: 60px 4% 75px 4%;
 }
 
 .navbar-brand img {
@@ -66,7 +89,18 @@ h6 {
     top: 0px;
     width: 100%;
     background: #000;
-    padding: 10px 4% 75px 4%;
+    padding: 0;
+    margin-top:-30px;
+}
+
+.container-fluid {
+}
+
+.navbar-collapse {
+    background: #fff;
+    width: 100%;
+    padding: 0px;
+    margin-top:0px;
 }
 
 .lavendar {
@@ -76,8 +110,16 @@ h6 {
     padding: 70px;
 }
 
-.lavendar h1 {
+.lavendar h2 {
     text-shadow: 5px 0px 40px #d4c9c7;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color:#241310;
+}
+
+.lavendar h2.rightText {
+    text-align: left;
+    padding-left: 7%;
 }
 
 
@@ -87,15 +129,20 @@ h6 {
 }
 
 .venue {
-    background: url("/assets/img/bg-position.jpg") 50%;
+    background: url("/assets/img/bg-green.jpg") 50%;
     background-size: cover;
     background-attachment: fixed;
     padding: 70px;
 }
 
+.venue .code {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+
 .concert {
     padding: 70px;
-    background: #882c59;
+    background: #d4c9c7;
 }
 
 .card-title {
@@ -113,27 +160,33 @@ h6 {
     padding-bottom: 15px;
 }
 
+.nav-item:hover {
+    border: 0px !important;
+    color: #fff !important;
+    border-bottom: 0px solid #fff !important;
+} 
+
 .navbar-light a {
    color: #fff;
 }
 
-.nav-item a:hover, .nav-item a:focus, .nav-item a:active {
-    color: #fff !important;
-    border-bottom: 5px solid #fff;
+.nav-item a:hover {
 }
 
-.navbar-light .navbar-toggler-icon {
-    background: #c00;
+.navbar-light .navbar-toggler-icon.collapse {
+    background: url("/assets/img/menu-mobile.png") no-repeat;
 }
 
 .navbar-light .navbar-toggler {
     color: #FF4081;
+    position: absolute;
+    top: 30px;
+    right: 4%;
 }
 
 .carousel-control-prev {
     color: #fff;
     width: 10%;
-    background: #c00;
 }
 
 .carousel-control-next {
@@ -162,9 +215,11 @@ h6 {
 .collapse  {
     border: 0px solid #c00;
     text-align: center;
+    background: none;
 }
 
 .me-auto {
+    padding: 40px 0;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -203,11 +258,34 @@ h6 {
     border: 0px solid #000;
     float:left;
     width: 100%;
+    padding-bottom: 100px;
 }
 
 
 .banner .card-body {
-   padding: 50px;
+   padding: 50px 0;
+}
+
+.highcharts-container {
+    border:10px solid #e8e8e8;
+    padding: 0px;
+    margin: 0px 25px; 
+    min-height: 300px;
+}
+
+.highcharts-root {
+    background: #fff;
+}
+
+._ngcontent-esq-c16 {
+    background: #000;
+    height: 300px !important;
+}
+
+.highcharts-root,
+.highcharts-background,
+.highcharts-plot-background {
+    height: 300px !important;
 }
 
 .card {
@@ -217,9 +295,18 @@ h6 {
 }
 
 .card-body {
-    background: #fff;
     margin: 10px;
     padding:0px 0 20px 0;
+}
+
+.concert .card-body {
+    background: #fff;
+}
+
+.concert h2 {
+    color: #241310;
+    font-size: 2.5vw;
+    padding-bottom: 20px;;
 }
 
 .card-body p {
@@ -241,6 +328,7 @@ h6 {
     opacity: .7;
     margin-bottom:0px;
     padding-bottom:0px;
+    color: #fff;
 }
 
 .carousel p {
@@ -305,6 +393,30 @@ h6 {
     height: 200px !important;
 }
 
+h1.quote {
+    font-size: 46px;
+    font-style: italic;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 5px 0px 60px #000;
+    background: url("/assets/img/mask.png") no-repeat 50% 0;
+    padding-top: 150px;
+    margin-top:-15px;
+}
+
+
+h2.author {
+    font-size: 24px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+    color: #fff;
+    font-weight: 23;
+    text-shadow: 5px 0px 20px #000;
+    margin-bottom: 100px;
+}
 
 #track {
     width: 100%;
@@ -314,22 +426,26 @@ h6 {
 .trackContainer {
     text-align: left;
     float:left;
+    border: 5px solid #e8e8e8 !important;
 }
 
 .trackInnerContainer {
-    margin: 5px;
-    background: #fff;
-    border: 1px solid #ccc;
+    margin: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e8e8e8;
+    min-height: 75px;
 }
 
 .trackIcon {
     border: 0px solid #c00;
-    height:61px;
     float:left;
+    margin-right: 10px;
 }
 
 .trackIcon img {
     width: 100%;
+    width: 150px;
+    height: 75px;
 }
 
 .banner img.trackIcon {
@@ -345,6 +461,7 @@ h6 {
 .trackDesc a {
     display:block;
     padding: 10px 10px 2px 10px;
+    line-height: 130%;
 }
 
 
@@ -379,6 +496,7 @@ h6 {
     text-align:left;
     font-size: 2.5vw;
     font-weight: 800;
+    color: #241310;
 }
 
 .concert .card-title {
@@ -392,8 +510,89 @@ h6 {
     text-align: left;
     border-left: 1px solid #ccc;
     margin: 10px 0 0 0 !important;
-    padding: 0 20px 0 20px;
+    padding: 0 10px 0 20px;
     margin: 0;
+}
+
+.shuffle {
+    background: #fff;
+    margin: 15px;
+}
+
+.shffle figure {
+    padding: 15px !important;
+    text-align: center;
+}
+
+.my-shuffle-container {
+    border: 0px solid #c00;
+    min-height: 500px;
+}
+
+.shuffle img {
+    width: 80% !important;
+    float:none;
+    margin: 0 auto;
+}
+
+#masonry,
+.row.grid,
+.container {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0px !important;
+}
+
+.my-3 {
+}
+
+
+.container .row {
+}
+
+.grid-item  {
+}
+
+.col-3\@md {
+}
+
+.picture-item {
+    height: auto !important;
+    margin: 0;
+}
+
+.grid {
+    background:#fff !important;
+  }
+      
+  .rounded.overflow-hidden.box-img {
+    background:#fff !important;
+  }
+
+.merchCell {
+    border: 0px solid #c00;
+    float:left;
+    text-align: center;
+}
+
+.merchName {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.merchPrice {
+    font-size: 32px;
+    font-weight: 600;
+    color: #882c59;
+    padding-bottom: 20px;
+}
+
+.merchImage {
+    margin: 0 auto;
+}
+
+.infiniteScroll {
+    text-align: center;
 }
 
 .concert .btn {
@@ -403,10 +602,30 @@ h6 {
    clear:both;
 }
 
+.viewAll {
+    padding: 35px 0 0 0;
+    clear:both;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .banner .card-title {
     color: #7b605b;
     margin-top:0px;
+    width: 100%;
+    text-align:center;
 }
+
+.venue h3 {
+    color: #7b605b;
+    text-transform: uppercase;
+}
+
+.venue p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 .dates {
     font-size: 1.5vw;
@@ -432,13 +651,17 @@ h6 {
     min-height:600px;
 }
 
-@media screen and (max-width: 992px) and (min-width: 769px) {
+@media screen and (max-width: 992px) {
     .card-title {
         font-size: 4vw;
     }
 
     .dates {
         font-size: 2.4vw;
+    }
+    
+    .navbar-collapse {
+        margin-top: -160px;
     }
 
     .codeContainer  {
@@ -450,9 +673,80 @@ h6 {
         padding-left: 5%;
         padding-right: 5%;
     }
+    
+    .trackLink {
+        padding: 2px 10px 2px 0px;
+        font-weight: 26px;
+    }
+    
+    .trackDuration {
+        font-size: 12px;
+        padding: 2px 10px 3px 0px;
+        font-weight: 400;
+    }
+
+    .col-3\@md {
+        width: 50% !important;
+    }
+    .collapse  {
+        background: #fff;
+    }
+
+    .container-fluid {
+        padding-right: var(--bs-gutter-x,.0rem);
+        padding-left: var(--bs-gutter-x, 0rem);
+    }
+
+    .navbar-brand {
+        width: 400px;
+        padding: 50px 4% 75px 4%;
+    }
+    
+    .nav-item a {
+        font-size: 24px !important; 
+    }
+
+    .navbar-toggler {
+        top: 60px;
+    }
+
+    .navbar-light .navbar-toggler {
+        color: #FF4081;
+        position: absolute;
+        top: 60px;
+        right: 4%;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background: none;;
+    }
+
+    .navbar-toggler-icon {
+        background: url("/assets/img/menu-mobile.png") no-repeat !important;
+        margin-top: 5px;
+    }
+    
+    .navbar-toggler.collapse {
+        background: url("/assets/img/menu-mobile-x.png") no-repeat;
+    }
+
+    .highcharts-container {
+        width: 90% !important;
+    }
+
+    .highcharts-root, .highcharts-background, .highcharts-plot-background {
+        width: 100% !important;
+    }
+
+    .lavendar h2.rightText {
+        padding-top: 100px;
+        text-align: center;
+        text-align: center;
+        padding-left: 0%;
+    }
 }
 
-@media screen and (max-width: 768px) and (min-width: 577px) {
+@media screen and (max-width: 768px)  {
     .card-title {
         font-size: 6vw;
     }
@@ -464,6 +758,24 @@ h6 {
     .codeContainer  {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    div#track,
+    .trackDesc a,
+    .trackContainer .trackDesc a {
+        font-weight: 26px !important;
+    }
+
+    .col-3\@md {
+        width: 100% !important;
+    }
+
+    .collapse  {
+        background: #fff;
+    }
+
+    .nav-item a {
+        font-size: 24px !important; 
+        text-shadow: none;
     }
 }
 
@@ -479,5 +791,16 @@ h6 {
     .codeContainer  {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    .collapse  {
+        background: #fff;
+    }
+
+    .nav-item a {
+        font-size: 24px !important; 
+    }
+
+    .navbar-brand {
+        width: 320px;
     }
 }

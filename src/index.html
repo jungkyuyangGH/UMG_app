@@ -25,6 +25,9 @@
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <link rel="stylesheet" href="https://vestride.github.io/Shuffle/css/style.css" />
+  <link rel="stylesheet" href="https://vestride.github.io/Shuffle/css/shuffle-styles.css" />
+
 	<app-root></app-root>
 
   <script>
@@ -82,8 +85,160 @@ function getArtist() {
 
 
 getArtist();
-  </script>
 
+const api_url ="https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=grande&key=AIzaSyAdDO2Sm5fG1Pi4arlwCArI7HHHwB04fO0" 
+async function getISS() {
+  const response = await fetch(api_url);
+  const data = await response.json();
+
+  
+
+  for (let i = 0; i < 3; i++) {
+    console.log(data.items[i]['id'].videoId);
+    console.log(data.items[i]['snippet'].title);
+    console.log(data.items[i]['snippet'].thumbnails.medium.url);
+    console.log("https://youtu.be/" + data.items[i]['id'].videoId + '"');
+    
+    let myString = '<iframe width="560" height="315" "https://youtu.be/' + data.items[i]['id'].videoId + '" "title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    let myStringCast = String(myString);
+    //alert(String(myString));
+    document.getElementById("youTubeVid").innerHTML += myStringCast;
+  } 
+  /*
+
+  '<iframe width="560" height="315" src="https://youtu.be/"' + 
+    data.items[i]['id'].videoId + 
+    'title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+
+  for (1=0; i<4; i++) {
+    var videoItem = data.items;
+    var videoId = videoItem.id;
+    var videoSnippet = videoId.Snippet;
+    var videoThumbs = videoSnippet.Thumbnails;
+    var videoMedium = videoThumbs.medium;
+   console.log(videoItem + ' + ' +  videroId + ' + ' + videoSnippet);
+     }
+     */
+}
+
+getISS();
+
+</script>
+
+<script>
+  /* ----------------Infiite Scroll Starts -------------------------------*/
+  window.console = window.console || function(t) {};
+
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="container">
+	<main class="my-3">
+		<div class="row grid" id="masonry" data-masonry='{"percentPosition": true }'></div>
+	</main>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js'></script>
+      <script id="rendered-js" >
+		  
+		  
+		  
+		  
+// Variables
+let ultimoElemento;
+
+// Funciones genericas
+const rngInteger = (min, max) => Math.floor(Math.random() * max + min);
+const rngColor = () => `hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`;
+
+// Obj Observador
+const observador = new IntersectionObserver(
+entradas => {
+  entradas.forEach(entrada => {
+    if (entrada.isIntersecting) appendElement();
+  });
+},
+{
+  rootMargin: "0px 0px 0px 0px",
+  threshold: 1.0 });
+
+
+
+// Crea un nuevo elemento HTML
+function createNewElement() {
+  const elem = document.createElement("div");
+  const height = rngInteger(200, 400);
+
+  elem.style.height = `${height}px`;
+  elem.className = "grid-item my-3 col-xl-4 col-md-6 col-sm-12 ";
+  elem.innerHTML = `<div class="rounded overflow-hidden box-img" style="height: 100%; background-color: ${rngColor()};">
+                            <img src="https://picsum.photos/1080/1920?random=${rngInteger(
+  1,
+  200)
+  }">
+                          </div>`;
+  return elem;
+}
+
+// Funcion inicial
+(function () {
+  const masonry = document.getElementById("masonry");
+  for (let i = 0; i < 10; i++) {if (window.CP.shouldStopExecution(0)) break;
+    const element = createNewElement();
+    masonry.appendChild(element);
+  }window.CP.exitedLoop(0);
+
+  getLastChild();
+})();
+
+// #########################################
+// ########### Masonry functions ###########
+
+var grid = document.querySelector(".grid");
+var msnry = new Masonry(grid, {
+  itemSelector: ".grid-item" });
+
+
+function appendElement() {
+  // create new item elements
+  var elems = [];
+  var fragment = document.createDocumentFragment();
+  for (var i = 0; i < 3; i++) {if (window.CP.shouldStopExecution(1)) break;
+    var elem = createNewElement();
+    fragment.appendChild(elem);
+    elems.push(elem);
+  }
+  // append elements to container
+  window.CP.exitedLoop(1);grid.appendChild(fragment);
+  // add and lay out newly appended elements
+  msnry.appended(elems);
+
+  getLastChild();
+}
+
+// Obtiene el ultimo observado por el Obj IntersectionObserver
+function getLastChild() {
+  if (ultimoElemento) observador.unobserve(ultimoElemento);
+
+  const elements = document.querySelectorAll(".grid-item");
+  ultimoElemento = elements[elements.length - 1];
+  observador.observe(ultimoElemento);
+}
+//# sourceURL=pen.js
+  /* ----------------Infiite Scroll Ends -------------------------------*/
+
+    </script>
+
+<script src="https://vestride.github.io/Shuffle/dist/shuffle.js"></script>
+<script src="https://vestride.github.io/Shuffle/js/demos/homepage.js"></script>
   
 </body>
 </html>
