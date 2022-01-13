@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PageNotFoundComponent implements OnInit {
 
   constructor() { 
-    
-    window.location.href = "https://jky.graphics/UMG/";
+    alert();
+    //window.location.href = "https://jky.graphics/UMG/";
   }
 
   ngOnInit(): void {
