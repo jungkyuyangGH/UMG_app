@@ -93,8 +93,6 @@ h6 {
     margin-top:-30px;
 }
 
-.container-fluid {
-}
 
 .navbar-collapse {
     background: #fff;
@@ -104,7 +102,7 @@ h6 {
 }
 
 .lavendar {
-    background: url("/assets/img/img-position.jpg") no-repeat 0 0 #d4c9c7;
+    background: url("https://jky.graphics/UMG/assets/img/img-position.jpg") no-repeat 0 0 #d4c9c7;
     background-size: 100vh;
     background-attachment: fixed;
     padding: 70px;
@@ -125,11 +123,11 @@ h6 {
 
 .bg-light {
     background: none !important;
-    background: url("/assets/img/bg-topGrad.png") repeat-x !important;
+    background: url("https://jky.graphics/UMG/assets/img/bg-topGrad.png") repeat-x !important;
 }
 
 .venue {
-    background: url("/assets/img/bg-green.jpg") 50%;
+    background: url("https://jky.graphics/UMG/assets/img/bg-green.jpg") 50%;
     background-size: cover;
     background-attachment: fixed;
     padding: 70px;
@@ -170,11 +168,9 @@ h6 {
    color: #fff;
 }
 
-.nav-item a:hover {
-}
 
 .navbar-light .navbar-toggler-icon.collapse {
-    background: url("/assets/img/menu-mobile.png") no-repeat;
+    background: url("https://jky.graphics/UMG/assets/img/menu-mobile.png") no-repeat;
 }
 
 .navbar-light .navbar-toggler {
@@ -401,7 +397,7 @@ h1.quote {
     color: #fff;
     font-weight: 300;
     text-shadow: 5px 0px 60px #000;
-    background: url("/assets/img/mask.png") no-repeat 50% 0;
+    background: url("https://jky.graphics/UMG/assets/img/mask.png") no-repeat 50% 0;
     padding-top: 150px;
     margin-top:-15px;
 }
@@ -543,18 +539,7 @@ h2.author {
     padding: 0px !important;
 }
 
-.my-3 {
-}
 
-
-.container .row {
-}
-
-.grid-item  {
-}
-
-.col-3\@md {
-}
 
 .picture-item {
     height: auto !important;
@@ -722,12 +707,12 @@ h2.author {
     }
 
     .navbar-toggler-icon {
-        background: url("/assets/img/menu-mobile.png") no-repeat !important;
+        background: url("https://jky.graphics/UMG/assets/img/menu-mobile.png") no-repeat !important;
         margin-top: 5px;
     }
     
     .navbar-toggler.collapse {
-        background: url("/assets/img/menu-mobile-x.png") no-repeat;
+        background: url("https://jky.graphics/UMG/assets/img/menu-mobile-x.png") no-repeat;
     }
 
     .highcharts-container {
