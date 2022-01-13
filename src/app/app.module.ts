@@ -8,6 +8,7 @@ import { TourComponent } from './tour/tour.component';
 import { MerchComponent } from './merch/merch.component';
 import { MerchDetailComponent } from './merch-detail/merch-detail.component';
 import { MusicComponent } from './music/music.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MusicComponent } from './music/music.component';
     TourComponent,
     MerchComponent,
     MerchDetailComponent,
-    MusicComponent
+    MusicComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
