@@ -9,12 +9,11 @@ import { MusicComponent } from './music/music.component';
 import { TourComponent } from './tour/tour.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", redirectTo: "/" },
+  { path: "", pathMatch: "full", redirectTo: "https://jky.graphics/UMG/" },
   { path: "home", component: HomeComponent },
   { path: "merch", component: MerchComponent },
-  { path: "*", component: PageNotFoundComponent },
-  /*
-  { path: "merch", 
+ { path: "*", component: PageNotFoundComponent },
+   /*{ path: "merch", 
     component: MerchComponent, 
     children: [
       { path: 'merch-detail', component: MerchDetailComponent },

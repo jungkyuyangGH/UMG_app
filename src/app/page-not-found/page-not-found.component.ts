@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    
+    window.location.href = "https://jky.graphics/UMG/";
+  }
 
   ngOnInit(): void {
+
+
   }
 
 }
