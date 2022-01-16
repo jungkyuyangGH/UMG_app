@@ -55,12 +55,27 @@ h6 {
     background-color: rgba(177,27,77,100) !important;
 }
 
+.btn-primary:active,
+.btn-primary:hover {
+    color: #fff !important;
+}
+
 .btn-group.filter-options .btn.btn--primary {
     background: none !important;
     color: #7b605b !important;
     border-bottom: 5px solid #b11b4d !important;
     margin: 0 5px;
     padding: 10px 30px;
+    font-size: 18px;
+}
+
+li+li {
+    margin-top: 0px;
+}
+
+.codeContainer.shuffle .btn {
+    padding: 0.75em 0.8em;
+    font-size: 12px;
 }
 
 .videoContainer {
@@ -542,6 +557,7 @@ h2.author {
 
 .picture-item {
     height: auto !important;
+    padding-bottom: 75px;
     margin: 0;
 }
 
@@ -564,6 +580,10 @@ h2.author {
     font-weight: 600;
 }
 
+.codeContainer.shuffle .merchName {
+    font-size: 14px;
+}
+
 .merchPrice {
     font-size: 32px;
     font-weight: 600;
@@ -577,6 +597,7 @@ h2.author {
 
 .infiniteScroll {
     text-align: center;
+    margin-top: -100px;
 }
 
 .concert .btn {
