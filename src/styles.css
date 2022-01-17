@@ -865,7 +865,8 @@ h2.author {
     }
 
     .highcharts-container {
-        width: 90% !important;
+        width: 100% !important;
+        margin: 0px;
     }
 
     .highcharts-root, .highcharts-background, .highcharts-plot-background {
@@ -877,6 +878,10 @@ h2.author {
         text-align: center;
         text-align: center;
         padding-left: 0%;
+    }
+
+    .wrapper.btn.tab {
+        font-size: 18px !important;
     }
 }
 
@@ -918,11 +923,12 @@ h2.author {
 
 @media screen and (max-width: 576px) {
     .card-title {
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     .dates {
-        font-size: 3vw;
+        font-size: 5.5vw;
+        line-height: 140%;
     }
 
     .codeContainer  {
@@ -944,5 +950,22 @@ h2.author {
     .wrapper.btn.tab {
         padding-left: 20px !important;
         padding-right: 20px !important;
+    }
+
+    .location  {
+        font-size: 24px;
+    }
+
+    .concert .card-body p {
+        font-size: 14px;;
+    }
+
+    .wrapper.btn a {
+        font-size: 14px;
+        padding: 10px 17px;
+    }
+
+    .codeContainer.shuffle .merchName {
+        font-size: 20px;
     }
 }
