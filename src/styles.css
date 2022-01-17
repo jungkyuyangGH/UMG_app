@@ -49,39 +49,6 @@ h6 {
     font-size: 12px;
     font-weight: 800;
 }
-/*
-.btn {
-    padding: 5px 20px;
-    font-size: 14px;
-    border: 0px !important;
-    color: #fff !important;
-    background-color: #b11b4d !important;
-}
-
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default,
-.btn:before,
-.btn:after,
-.btn:focus,
-.btn::selection,
-.btn.btn-primary:hover,
-.btn.btn-primary:before,
-.btn.btn-primary:after {
-    color: #fff !important;
-    border: 0px solid #ccc !important;
-    background: rgb(12, 190, 152) !important;
-}
-
-.btn-group.filter-options .btn.btn--primary {
-    background: none !important;
-    color: #7b605b !important;
-    border-bottom: 5px solid #b11b4d !important;
-    margin: 0 5px;
-    padding: 10px 30px;
-    font-size: 18px;
-}
-
-*/
-
 
 /* Bootstrap Buttons Start */
 
@@ -101,6 +68,7 @@ h6 {
     padding:7px 12px;
     border: 0px;
     background: #b11b4d;
+    border-radius: 3px;
 }
 
 .wrapper.btn.big a{
@@ -650,7 +618,7 @@ h2.author {
 
 .shuffle {
     background: #fff;
-    margin: 15px;
+    margin: 0;
 }
 
 .shffle figure {
@@ -918,6 +886,10 @@ h2.author {
 
     .carousel h5 {
         font-size: 13vw;
+    }
+
+    .videoContainer {
+        padding-bottom: 50px;
     }
 }
 
