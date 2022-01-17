@@ -240,7 +240,24 @@ function getLastChild() {
 
 // ----------------Infiite Scroll Ends -------------------------------
 
-    </script>
+  // ---------------Sticky Nav Starts -------------------------------
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+     document.getElementById("navbar").style.padding = "5px";
+      document.getElementById("hamburgerMenu").style.top = "8px";
+    } else {
+      document.getElementById("navbar").style.height  = "20px !important";
+      document.getElementById("navbar").style.padding = "40px 0px";
+      document.getElementById("hamburgerMenu").style.top = "48px";
+    }
+  }
+  </script>
+
+// ---------------Sticky Nav Starts -------------------------------
+
 
 <script src="https://vestride.github.io/Shuffle/dist/shuffle.js"></script>
 <script src="https://vestride.github.io/Shuffle/js/demos/homepage.js"></script>

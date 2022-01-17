@@ -150,6 +150,17 @@ h6 {
     color: #fff !important;
 }
 
+#navbar {
+    padding-top: 40px;
+    padding-bottom: 40px;
+     transition: 0.4s;
+     position: fixed;
+     width: 100%;
+     top: 0;
+     z-index: 9999;
+     background: url("https://jky.graphics/UMG/assets/img/bg-topGrad.png") repeat-x !important;
+   }
+
 .navbar li,
 .navbar li+li {
     margin-top: 0px;
@@ -177,7 +188,7 @@ h6 {
 
 .navbar-brand {
     width: 600px;
-    padding: 60px 4% 75px 4%;
+    padding: 0px 4% 0px 4%;
 }
 
 .navbar-brand img {
@@ -227,7 +238,6 @@ h2.infiniteScroll {
 
 .bg-light {
     background: none !important;
-    background: url("https://jky.graphics/UMG/assets/img/bg-topGrad.png") repeat-x !important;
 }
 
 .venue {
@@ -316,7 +326,7 @@ h2.infiniteScroll {
 }
 
 .me-auto {
-    padding: 40px 0;
+    padding: 10px 0 0 0;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -796,9 +806,14 @@ h2.author {
         padding-left: var(--bs-gutter-x, 0rem);
     }
 
+    #navbar {
+        padding-top: 33px;
+        padding-bottom: 50px;
+    }
+
     .navbar-brand {
         width: 400px;
-        padding: 50px 4% 75px 4%;
+        padding: 0 4%;
     }
     
     .nav-item a, .nav-item:hover {
@@ -807,15 +822,11 @@ h2.author {
        color: #FF4081  !important; 
         text-shadow: 5px 0px 30px #fff;
      }
-
-    .navbar-toggler {
-        top: 60px;
-    }
-
+     
     .navbar-light .navbar-toggler {
         color: #FF4081;
         position: absolute;
-        top: 60px;
+        top:38px;
         right: 4%;
     }
 
@@ -851,6 +862,22 @@ h2.author {
     .wrapper.btn.tab {
         font-size: 18px !important;
     }
+
+    .me-auto {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+
+    .me-auto li a {
+        padding: 10px 0;
+        display: block;
+        font-size: 30px !important;
+    }
+
+    .me-auto li a:hover {
+        font-size: 30px !important;
+    }
+
 }
 
 @media screen and (max-width: 768px)  {
@@ -940,4 +967,5 @@ h2.author {
     .codeContainer.shuffle .merchName {
         font-size: 20px;
     }
+
 }
