@@ -21,7 +21,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!--<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>-->
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -31,6 +30,8 @@
 	<app-root></app-root>
 
   <script>
+
+// ----------------Load Home Carousel Vis Bootstrap
     AOS.init({
       easing: 'ease-out-back',
       duration: 1000
@@ -45,7 +46,8 @@
     }
 
     let numOfTracks = 0;
-		
+
+// ---------------- Load Album Tracks from Last.fm
 function getArtist() {
 	fetch("https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=ef2118b3a412f35fe0f52c4594bbb894&artist=Ariana+Grande&album=My+Everything+(Deluxe)")
 		.then(function(resp) {
@@ -59,7 +61,7 @@ function getArtist() {
 		
 			for (let i = 0; i < numOfTracks; i++) {
 			  //text += "The number is " + i + "<br>";
-				console.log("The number is " + i);
+				//console.log("The number is " + i);
 				document.getElementById("track").innerHTML += 
 					'<div class="trackContainer col-lg-6 col-sm-12 col-12">' +
             '<div class="trackInnerContainer">' +
@@ -86,6 +88,9 @@ function getArtist() {
 
 getArtist();
 
+
+// ----------------Load YouTube Videos Via API Call so loaded it as STATIC
+// ----------------Could not get "/" to apper so spme reason... Appears as "http : youtu.be..."
 const api_url ="https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=grande&key=AIzaSyAdDO2Sm5fG1Pi4arlwCArI7HHHwB04fO0" 
 async function getISS() {
   const response = await fetch(api_url);
@@ -94,15 +99,15 @@ async function getISS() {
   
 
   for (let i = 0; i < 3; i++) {
-    console.log(data.items[i]['id'].videoId);
-    console.log(data.items[i]['snippet'].title);
-    console.log(data.items[i]['snippet'].thumbnails.medium.url);
-    console.log("https://youtu.be/" + data.items[i]['id'].videoId + '"');
+    //console.log(data.items[i]['id'].videoId);
+    //console.log(data.items[i]['snippet'].title);
+    //console.log(data.items[i]['snippet'].thumbnails.medium.url);
+    //console.log("https://youtu.be/" + data.items[i]['id'].videoId + '"');
     
     let myString = '<iframe width="560" height="315" "https://youtu.be/' + data.items[i]['id'].videoId + '" "title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     let myStringCast = String(myString);
     //alert(String(myString));
-    document.getElementById("youTubeVid").innerHTML += myStringCast;
+    //document.getElementById("youTubeVid").innerHTML += myStringCast;
   } 
   /*
 
@@ -127,7 +132,9 @@ getISS();
 </script>
 
 <script>
-  /* ----------------Infiite Scroll Starts -------------------------------*/
+
+  
+  // ----------------Infiite Scroll Starts ------------------------------
   window.console = window.console || function(t) {};
 
   if (document.location.search.match(/type=embed/gi)) {
@@ -148,8 +155,6 @@ getISS();
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js'></script>
       <script id="rendered-js" >
-		  
-		   
 		  
 		  
 // Variables
@@ -232,7 +237,8 @@ function getLastChild() {
   observador.observe(ultimoElemento);
 }
 //# sourceURL=pen.js
-  /* ----------------Infiite Scroll Ends -------------------------------*/
+
+// ----------------Infiite Scroll Ends -------------------------------
 
     </script>
 

@@ -5,6 +5,10 @@ body {
     background: #fff;
 }
 
+a {
+    color: #b11b4d;
+}
+
 a:hover {
     color: #dc3588;
 }
@@ -45,19 +49,26 @@ h6 {
     font-size: 12px;
     font-weight: 800;
 }
-
+/*
 .btn {
     padding: 5px 20px;
     font-size: 14px;
     border: 0px !important;
-    background: #b11b4d;
     color: #fff !important;
-    background-color: rgba(177,27,77,100) !important;
+    background-color: #b11b4d !important;
 }
 
-.btn-primary:active,
-.btn-primary:hover {
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default,
+.btn:before,
+.btn:after,
+.btn:focus,
+.btn::selection,
+.btn.btn-primary:hover,
+.btn.btn-primary:before,
+.btn.btn-primary:after {
     color: #fff !important;
+    border: 0px solid #ccc !important;
+    background: rgb(12, 190, 152) !important;
 }
 
 .btn-group.filter-options .btn.btn--primary {
@@ -69,8 +80,95 @@ h6 {
     font-size: 18px;
 }
 
-li+li {
-    margin-top: 0px;
+*/
+
+
+/* Bootstrap Buttons Start */
+
+.wrapper.btn{
+    padding: 0px;
+    border: 0px;
+}
+
+.wrapper.btn a{
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    padding:7px 12px;
+    border: 0px;
+    background: #b11b4d;
+}
+
+.wrapper.btn.big a{
+    font-size: 14px;
+    padding: 10px 17px;
+}
+
+.wrapper.btn a span{
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper.btn a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FF4081;
+    transition: all .25s;
+}
+
+.wrapper.btn a:hover{
+    color: #fff;
+    background: none !important;
+}
+
+.wrapper.btn a:hover:after{
+    width: 100%;
+}
+
+.wrapper.btn:hover,
+.wrapper.btn:before {
+    background: none !important;
+}
+
+/* Bootstrap Buttonn Ends*/
+
+/* Shuffle Tabs Start */
+.wrapper.btn.tab {
+    border-bottom: 5px solid #c00;
+    color: #5d6d77;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px !important;
+}
+
+.wrapper.btn.tab:hover {
+    border-bottom: 5px solid #FF4081 !important;
+    color: #FF4081 !important;
+}
+
+.wrapper.btn.tab.active {
+    border-bottom: 5px solid #FF4081 !important;
+    color: #FF4081 !important;
+    background: none !important;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 0%);
+}
+/* Shuffle Tabs Ends */
+
+.concert .btn {
+    text-align: left;
+    margin: 7px 0 0 0;
+    font-size: 12px;
+    clear:both;
 }
 
 .codeContainer.shuffle .btn {
@@ -78,16 +176,35 @@ li+li {
     font-size: 12px;
 }
 
-.videoContainer {
-    padding: 150px 0 150px 0;
-    float:left; 
-    width: 100%;
-}
-
 .btn.btn-primary:hover,
 .btn-primary:hover,
 .btn:hover {
     color: #fff !important;
+}
+
+.navbar li,
+.navbar li+li {
+    margin-top: 0px;
+}
+
+.navbar-nav li.nav-item {
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    padding: 0 0 10px 0 !important;
+    margin: 0 30px;
+}
+
+.navbar-nav li a:hover {
+    text-decoration: none;
+}
+
+.navbar-nav li:hover {
+    border-bottom: 5px solid #fff !important;
+}
+
+.videoContainer {
+    padding: 150px 0 150px 0;
+    float:left; 
+    width: 100%;
 }
 
 .navbar-brand {
@@ -123,9 +240,13 @@ li+li {
     padding: 70px;
 }
 
-.lavendar h2 {
+
+.lavendar h2,
+.concert h2,
+.card-body h2,
+h2.infiniteScroll {
     text-shadow: 5px 0px 40px #d4c9c7;
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 25px;
     color:#241310;
 }
@@ -214,9 +335,6 @@ li+li {
     opacity: 1;
 }
 
-.nav-item {
-    padding: 10px 30px;
-}
 
 .navbar-nav {
     margin: o auto;
@@ -254,6 +372,11 @@ li+li {
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
+.codeContainer.shuffle {
+    padding-top: 90px;
+}
+
 
 .code {
     width: 100% !important;
@@ -314,11 +437,6 @@ li+li {
     background: #fff;
 }
 
-.concert h2 {
-    color: #241310;
-    font-size: 2.5vw;
-    padding-bottom: 20px;;
-}
 
 .card-body p {
     margin: 0px;
@@ -469,10 +587,15 @@ h2.author {
     display: contents;
 }
 
-.trackDesc a {
+.trackDesc a, .trackDesc a:visited {
     display:block;
     padding: 10px 10px 2px 10px;
     line-height: 130%;
+    color: #b11b4d;
+}
+
+.trackDesc a:hover {
+    color: #FF4081;
 }
 
 
@@ -588,7 +711,7 @@ h2.author {
     font-size: 32px;
     font-weight: 600;
     color: #882c59;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .merchImage {
@@ -598,13 +721,6 @@ h2.author {
 .infiniteScroll {
     text-align: center;
     margin-top: -100px;
-}
-
-.concert .btn {
-    text-align: left;
-    margin: 7px 0 0 0;
-    font-size: 12px;
-   clear:both;
 }
 
 .viewAll {
@@ -617,8 +733,10 @@ h2.author {
 .banner .card-title {
     color: #7b605b;
     margin-top:0px;
+    margin-bottom:10px;
     width: 100%;
     text-align:center;
+    font-weight: 700;
 }
 
 .venue h3 {
@@ -678,14 +796,22 @@ h2.author {
         padding-left: 5%;
         padding-right: 5%;
     }
-    
+
+    #track,
+    div#track,
+    .trackDesc,
+    .trackDesc a,
+    .trackContainer {
+        font-size: 18px !important;
+    }
+
     .trackLink {
         padding: 2px 10px 2px 0px;
         font-weight: 26px;
     }
     
     .trackDuration {
-        font-size: 12px;
+        font-size: 14px;
         padding: 2px 10px 3px 0px;
         font-weight: 400;
     }
@@ -707,9 +833,12 @@ h2.author {
         padding: 50px 4% 75px 4%;
     }
     
-    .nav-item a {
+    .nav-item a, .nav-item:hover {
+        text-align: center !important;
         font-size: 24px !important; 
-    }
+       color: #FF4081  !important; 
+        text-shadow: 5px 0px 30px #fff;
+     }
 
     .navbar-toggler {
         top: 60px;
@@ -764,11 +893,6 @@ h2.author {
         padding-left: 5%;
         padding-right: 5%;
     }
-    div#track,
-    .trackDesc a,
-    .trackContainer .trackDesc a {
-        font-weight: 26px !important;
-    }
 
     .col-3\@md {
         width: 100% !important;
@@ -781,6 +905,14 @@ h2.author {
     .nav-item a {
         font-size: 24px !important; 
         text-shadow: none;
+    }
+
+    .d-none {
+        display: block !important;
+    }
+
+    .carousel h5 {
+        font-size: 13vw;
     }
 }
 
@@ -807,5 +939,10 @@ h2.author {
 
     .navbar-brand {
         width: 320px;
+    }
+
+    .wrapper.btn.tab {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 }
